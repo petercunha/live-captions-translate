@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Live Captions</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="popup">
+  <header>
+    <img src="icons/32.png" alt="" width="20" height="20">
+    <h1>Live Captions</h1>
+    <span id="state" class="state"></span>
+  </header>
+  <main>
+    <label class="field">
+      <span>Spoken language</span>
+      <select id="asrLang"></select>
+    </label>
+    <label class="field" id="enModelField">
+      <span>Speech model</span>
+      <select id="enModel"></select>
+    </label>
+    <label class="field">
+      <span>Translate to</span>
+      <select id="target"></select>
+    </label>
+
+    <button id="toggle" class="primary">Start captions</button>
+
+    <div id="status" class="status" hidden>
+      <div id="statusText"></div>
+      <div class="bar" id="barTrack"><div id="bar"></div></div>
+    </div>
+    <p id="note" class="note" hidden></p>
+
+    <div class="row">
+      <label class="check"><input type="checkbox" id="showOriginal"> Show original text</label>
+      <div class="seg" id="fontSize" role="group" aria-label="Caption size">
+        <button data-size="s" title="Small captions">A</button>
+        <button data-size="m" title="Medium captions">A</button>
+        <button data-size="l" title="Large captions">A</button>
+      </div>
+    </div>
+    <button id="transcript" class="secondary">Open transcript</button>
+  </main>
+  <footer>Speech recognition and translation run on this device. Shortcut <kbd>⌥⇧C</kbd></footer>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

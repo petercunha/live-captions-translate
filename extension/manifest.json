@@ -1,0 +1,47 @@
+{
+  "manifest_version": 3,
+  "name": "Live Captions & Translate",
+  "short_name": "Live Captions",
+  "version": "0.1.0",
+  "description": "Live captions and translation for any tab's audio, computed entirely on your device.",
+  "minimum_chrome_version": "138",
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "action": {
+    "default_title": "Live Captions & Translate",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/16.png",
+      "32": "icons/32.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "permissions": ["tabCapture", "offscreen", "storage", "scripting", "sidePanel"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "commands": {
+    "toggle-captions": {
+      "suggested_key": { "default": "Alt+Shift+C" },
+      "description": "Start or stop live captions on the current tab"
+    }
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+}

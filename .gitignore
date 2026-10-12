@@ -1,0 +1,5 @@
+node_modules/
+extension/vendor/
+extension/models/
+*.part
+.DS_Store

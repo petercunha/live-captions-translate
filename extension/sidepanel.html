@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Transcript</title>
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="panel">
+  <header>
+    <img src="icons/32.png" alt="" width="20" height="20">
+    <h1>Transcript</h1>
+    <span id="state" class="state"></span>
+    <div class="toolbar">
+      <button id="copy" class="secondary small">Copy</button>
+      <button id="save" class="secondary small">Save</button>
+    </div>
+  </header>
+  <ol id="lines" class="lines"></ol>
+  <p id="empty" class="empty">Start captions from the toolbar button and the transcript builds up here. It stays until you start a new session, so you can copy or save it afterwards.</p>
+  <script type="module" src="sidepanel.js"></script>
+</body>
+</html>
