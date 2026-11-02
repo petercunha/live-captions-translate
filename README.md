@@ -27,7 +27,7 @@ extra download in the extension. In auto-detect mode, Chrome's on-device
 
 | Mode | CPU (whole browser, while captioning) | Model size |
 |---|---|---|
-| Chrome just playing the audio | ~0.1 core | n/a |
+| Chrome just playing the audio | ~0.1 core | N/A |
 | English, Moonshine Small + translation | ~0.8 core | 165 MB |
 | English, Moonshine Medium + translation | ~2 cores (measured before the 4-thread cap, so likely less now) | 305 MB |
 | Any language, Whisper Small (WebGPU) + translation | ~0.6 core (+GPU) | 410 MB |
